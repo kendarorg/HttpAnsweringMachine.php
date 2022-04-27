@@ -1,0 +1,97 @@
+su
+su
+su
+ifconfig
+su
+exit
+apt-get remove docker docker-engine docker.io containerd runc
+apt-get install docker-ce docker-ce-cli containerd.io
+docker run hello-world
+docker ps
+vi /etc/default/
+su
+update-initramfs -u
+shutdown -r now
+docker ps
+su
+su
+ifconfig
+ip address del 192.168.4.2/24 dev eth0
+ip address add 192.168.4.3/24 dev eth0
+service network-manager stop
+cd /etc/sysconfig
+cat /etc/network/interfaces 
+ls /etc/network/interfaces 
+ls /etc/netplan/
+cd /etc/netplan/
+vi 00-installer-config.yaml 
+vi 00-installer-config.yaml 
+shutdown -r now
+docker network ls
+su
+ifconfig
+ip r
+ip r|grep default
+ifconfig eth0 promisc
+su ifconfig eth0 promisc
+ifconfig eth0 promisc
+ifconfig
+exit
+apt-get remove docker docker-engine docker.io containerd runc
+apt-get remove docker-ce docker-ce-cli containerd.io
+ls
+rm get-docker.sh 
+ls
+rm get-docker.sh 
+vi openconnect.sh
+ifconfig
+su
+apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev
+wget https://fossies.org/linux/privat/openconnect-8.10.tar.gz
+;s
+ls
+tar -xvf openconnect-8.10.tar.gz 
+cd openconnect-8.10/
+./config
+./configure
+apt-get install gnutls gnutls-utils iptables libev libintl                libnl3 libseccomp linux-pam lz4-libs openssl                libxml2 nmap-ncat socat openssh-client
+apt-get install curl file g++ gnutls-dev  gzip libev-dev
+apt-get install linux-headers                linux-pam-dev lz4-dev make readline-dev tar                sed readline procps
+./configure
+./configure
+apt-get pkg-config
+apt-get install -y pkg-config
+apt-get install -y pkg-config
+./configure
+apt-get install lz4-libs
+apt-get install zlib1g-dev
+./configure
+apt-get install libxml2-dev 
+apt-get install gnutls gnutls-utils iptables libev libintl
+apt-get install libxml2-dev 
+./config
+./configure
+less config.log
+rm config.log 
+./configure
+less config.log
+apt-get install uid-wrapper
+apt-get install libuid-wrapper
+./configure
+less config.log
+apt-get install build-essential
+./configure
+./configure --prefix=/opt/openconnect
+make check
+history|grep apt-ge
+apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev gnutls gnutls-utils iptables libev libintl libnl3 libseccomp linux-pam lz4-libs openssl libxml2 nmap-ncat socat openssh-client curl file g++ gnutls-dev  gzip libev-dev
+
+##linux-headers  linux-pam-dev lz4-dev make readline-dev tar sed readline procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essentialapt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev
+## linux-headers  linux-pam-dev lz4-dev make readline-dev tar sed readline procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev linux-headers  linux-pam-dev lz4-dev make readline-dev tar sed readline procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev make tar sed gettext procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev make tar sed gettext procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+./configure --prefix=/opt/openconnect
+make check
+make
+make install

@@ -1,0 +1,386 @@
+    1  docker
+    2  apt 
+    3  docker
+    4  ifconfig
+    5  docker ps
+    6  apt-get install vim
+    7  vi /etc/docker
+    8  vi /etc/systemd/docker.service.d/override.conf
+    9  sudo vi /etc/systemd/docker.service.d/override.conf
+   10  su systemctl daemon-relpad
+   11  su systemctl daemon-reload
+   12  sudo vi /etc/default/docker
+   13  su vi /lib/systemd/system/docker.service
+   14  sudo vi /etc/default/docker
+   15  systemctl
+   16  systemctl daemon-reload
+   17  systemctl restart docker
+   18  systemctl status docker.service
+   19  su vi /lib/systemd/system/docker.service
+   20  sudo vi /lib/systemd/system/docker.service
+   21  systemctl restart docker
+   22  systemctl status docker.service
+   23  ls /usr/bin|grep docker
+   24  ls /usr/bin
+   25  ls /usr/bin |grep do
+   26  whereis docker
+   27  su vi /lib/systemd/system/docker.service
+   28  vi /lib/systemd/system/docker.service
+   29  whereis docker
+   30  systemctl restart docker
+   31  systemctl daemon-reload
+   32  systemctl restart docker
+   33  systemctl status docker
+   34  whereis docker
+   35  /snap/bin/docker
+   36  vi /lib/systemd/system/docker.service
+   37  whereis dockerd
+   38  dockerd
+   39  apt-get update
+   40  apt-get remove docker docker-engine docker.io containerd runc
+   41  apt-get remove docker docker.io containerd runc
+   42  apt-get install apt-transport-https  ca-certificates curl gnupg-agent software-properties-common
+   43  add-apt-repository "deb [arch=amd64 https://download.docker.com/linux/ubuntu $(lsb_release) -cs) stable"
+   44  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   45  add-apt-repository "deb [arch=amd64 https://download.docker.com/linux/ubuntu $(lsb_release) -cs) stable"
+   46  apt-get install lsb-releases
+   47  apt-get install lsb-release
+   48  lsb_release
+   49  cat /etc/lsb-release
+   50  lsb_release -c
+   51  lsb_release -cd
+   52  lsb_release -cs
+   53  add-apt-repository "deb [arch=amd64 https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   54  add-apt-repository "deb [arch=amd64 https://download.docker.com/linux/ubuntu/dists/$(lsb_release -cs)/stable"
+   55  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   56  apt-get 
+   57  apt-get install docker-ce docker-ce-cli containerd.io
+   58  add-apt-repository "deb [arch=amd64 https://download.docker.com/linux/ubuntu/dists/$(lsb_release -cs)/stable" --allow-
+   59  vi /etc/apt/apt.conf
+   60  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   61  vi /etc/apt/apt.conf
+   62  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   63  add-apt-repository "deb [arch=amd64,trusted=yes] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   64  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" >> /etc/apt/sources.list
+   65  vi /etc/apt/sources.list
+   66  apt update
+   67  vi /etc/apt/sources.list
+   68  apt-get install apt-transport-https
+   69  sshd start
+   70  systctl sshd start
+   71  systctld sshd start
+   72  history|grep start
+   73  systemctl restart ssh
+   74  ifconfig
+   75  apt install openssh-server
+   76  systemctl status ssh
+   77  ufw allow ssh
+   78  ifconfig
+   79  history|grep vi
+   80  echo -e 'Acquire::Check-Valid-Until "false";\nAcquire::AllowInsecureRepositories "true";\nAcquire::AllowDowngradeToInsecureRepositories "true";' | tee /etc/apt/apt.conf.d/99-enable-unsecure-repos
+   81  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   82  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   83     $(lsb_release -cs) \
+   84     stable"
+   85  sudo apt-get update
+   86  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   87  rm /etc/default/docker
+   88  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   89  history|grep vi
+   90  rm /etc/default/docker
+   91  vi /lib/systemd/system/docker.service 
+   92  rm /lib/systemd/system/docker.service 
+   93  sudo apt-get remove docker-ce docker-ce-cli containerd.io
+   94  sudo apt-get remove docker docker-engine docker.io containerd runc
+   95  sudo apt-get update
+   96  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+   97  sudo apt-key fingerprint 0EBFCD88
+   98  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   99     $(lsb_release -cs) \
+  100     stable"
+  101  sudo apt-get update
+  102  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  103  systemctl status docker.service
+  104  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  105  sudo apt-get remove docker docker-engine docker.io containerd runc
+  106  rm /lib/systemd/system/docker.service
+  107  sudo apt-get remove docker docker-engine docker.io containerd runc
+  108  shutdown -r now
+  109  history
+  110  history|grep vi
+  111  exit
+  112  history|grep vi
+  113  sudo apt-get remove docker docker-engine docker.io containerd runc
+  114  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+  115  apt-get remove docker docker-engine docker.io containerd runc
+  116  apt-get install docker-ce docker-ce-cli containerd.io
+  117  apt-get update
+  118  apt-get install docker-ce docker-ce-cli containerd.io
+  119  apt-get remove docker-ce docker-ce-cli containerd.io
+  120  history|grep vi
+  121  rm /etc/default/docker
+  122  rm /lib/systemd/system/docker.service
+  123  cat /etc/systemd/docker.service.d/override.conf
+  124  apt-get install docker-ce docker-ce-cli containerd.io
+  125  curl -fsSL https://get.docker.com -o get-docker.sh
+  126  sh get-docker.sh
+  127  apt-get remove docker-ce docker-ce-cli containerd.io docker docker docker-engine docker.io containerd runc
+  128  sh get-docker.sh
+  129  whereis docker
+  130  snap remove docker
+  131  whereis docker
+  132  ls /etc/docker 
+  133  cat /etc/docker 
+  134  rm /etc/docker
+  135  sh get-docker.sh
+  136  sudo docker run hello-world
+  137  vi /etc/docker
+  138  vi /etc/docker/daemon.json
+  139  whereis docker
+  140  whereis dockerd
+  141  vi /etc/systemd/system/docker.service.d/override.conf
+  142  sudo vi /etc/systemd/system/docker.service.d/override.conf
+  143  systemctl status docker.service
+  144  rm /etc/docker/daemon.json
+  145  systemctl status docker.service
+  146  vi /lib/systemd/system/docker.service
+  147  sudo systemctl daemon-reload
+  148  sudo systemctl restart docker.service
+  149  ifconfig
+  150  docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+  151  sudo vi /etc/initramfs-tools/modules
+  152  update-initramfs -u
+  153  lsmod |grep hv_vmbu
+  154  lsmod |grep hv_
+  155  apt-get install linux-virtual linux-cloud-tools-virtual linux-tools-virtual
+  156  docker ps
+  157  ifconfig
+  158  ufw status
+  159  iptables
+  160  route
+  161  ifconfig
+  162  sudo ifconfig eth0 192.168.4.3 netmask 255.255.255.0
+  163  ifconfig
+  164  shutdown -h now
+  165  docker network ls
+  166  docker network create -d macvlan   --subnet=192.168.4.0/24   --ip-range=192.168.4.0/24   --aux-address="a=192.168.4.0" --aux-address="a=192.168.4.1"   --aux-address="a=192.168.4.2" --aux-address="a=192.168.4.3"   --aux-address="a=192.168.4.4" --aux-address="a=192.168.4.5"   --aux-address="a=192.168.4.6" --aux-address="a=192.168.4.7"   --aux-address="a=192.168.4.8" --aux-address="a=192.168.4.9"   --aux-address="a=192.168.4.10" --aux-address="a=192.168.4.11"   --aux-address="a=192.168.4.12" --aux-address="a=192.168.4.13"   --aux-address="a=192.168.4.14" --aux-address="a=192.168.4.15"   --aux-address="a=192.168.4.16"   -o parent=eth0 macnet32
+  167  docker network ls
+  168  docker run --cap-add=NET_ADMIN --cap-add=SYS_MODULE  --net macnet32 --ip 192.168.4.4  -it alpine /bin/sh
+  169  docker network remove macnet32
+  170  docker network create -d macvlan   --subnet=192.168.4.0/24   --ip-range=192.168.4.0/24   --gateway=192.168.4.1   --aux-address="a=192.168.4.0" --aux-address="a=192.168.4.1"   --aux-address="a=192.168.4.2" --aux-address="a=192.168.4.3"   --aux-address="a=192.168.4.4" --aux-address="a=192.168.4.5"   --aux-address="a=192.168.4.6" --aux-address="a=192.168.4.7"   --aux-address="a=192.168.4.8" --aux-address="a=192.168.4.9"   --aux-address="a=192.168.4.10" --aux-address="a=192.168.4.11"   --aux-address="a=192.168.4.12" --aux-address="a=192.168.4.13"   --aux-address="a=192.168.4.14" --aux-address="a=192.168.4.15"   --aux-address="a=192.168.4.16"   -o parent=eth0 macnet32
+  171  docker run --cap-add=NET_ADMIN --cap-add=SYS_MODULE  --net macnet32 --ip 192.168.4.4  -it alpine /bin/sh
+  172  docker network remove macnet32
+  173  docker network create -d macvlan   --subnet=192.168.4.0/24   --ip-range=192.168.4.0/24   --gateway=192.168.4.3   --aux-address="a=192.168.4.0" --aux-address="a=192.168.4.1"   --aux-address="a=192.168.4.2" --aux-address="a=192.168.4.3"   --aux-address="a=192.168.4.4" --aux-address="a=192.168.4.5"   --aux-address="a=192.168.4.6" --aux-address="a=192.168.4.7"   --aux-address="a=192.168.4.8" --aux-address="a=192.168.4.9"   --aux-address="a=192.168.4.10" --aux-address="a=192.168.4.11"   --aux-address="a=192.168.4.12" --aux-address="a=192.168.4.13"   --aux-address="a=192.168.4.14" --aux-address="a=192.168.4.15"   --aux-address="a=192.168.4.16"   -o parent=eth0 macnet32
+  174  docker run --cap-add=NET_ADMIN --cap-add=SYS_MODULE  --net macnet32 --ip 192.168.4.4  -it alpine /bin/sh
+  175  docker network remove macnet32
+  176  docker network create -d macvlan   --subnet=192.168.4.0/24   --ip-range=192.168.4.0/24   --aux-address="a=192.168.4.0" --aux-address="a=192.168.4.1"   --aux-address="a=192.168.4.2" --aux-address="a=192.168.4.3"   --aux-address="a=192.168.4.4" --aux-address="a=192.168.4.5"   --aux-address="a=192.168.4.6" --aux-address="a=192.168.4.7"   --aux-address="a=192.168.4.8" --aux-address="a=192.168.4.9"   --aux-address="a=192.168.4.10" --aux-address="a=192.168.4.11"   --aux-address="a=192.168.4.12" --aux-address="a=192.168.4.13"   --aux-address="a=192.168.4.14" --aux-address="a=192.168.4.15"   --aux-address="a=192.168.4.16"   
+  177  docker network create -d macvlan   --subnet=192.168.4.0/24   --ip-range=192.168.4.0/24   --aux-address="a=192.168.4.0" --aux-address="a=192.168.4.1"   --aux-address="a=192.168.4.2" --aux-address="a=192.168.4.3"   --aux-address="a=192.168.4.4" --aux-address="a=192.168.4.5"   --aux-address="a=192.168.4.6" --aux-address="a=192.168.4.7"   --aux-address="a=192.168.4.8" --aux-address="a=192.168.4.9"   --aux-address="a=192.168.4.10" --aux-address="a=192.168.4.11"   --aux-address="a=192.168.4.12" --aux-address="a=192.168.4.13"   --aux-address="a=192.168.4.14" --aux-address="a=192.168.4.15"   --aux-address="a=192.168.4.16"   -o macvlan_mode=bridge   -o parent=eth0 macnet32
+  178  docker run --cap-add=NET_ADMIN --cap-add=SYS_MODULE  --net macnet32 --ip 192.168.4.4  -it alpine /bin/sh
+  179  docker network remove macnet32
+  180  docker network create -d macvlan   --subnet=192.168.4.0/24   --ip-range=192.168.4.0/24   --aux-address="a=192.168.4.0" --aux-address="a=192.168.4.1"   --aux-address="a=192.168.4.2" --aux-address="a=192.168.4.3"   --aux-address="a=192.168.4.4" --aux-address="a=192.168.4.5"   --aux-address="a=192.168.4.6" --aux-address="a=192.168.4.7"   --aux-address="a=192.168.4.8" --aux-address="a=192.168.4.9"   --aux-address="a=192.168.4.10" --aux-address="a=192.168.4.11"   --aux-address="a=192.168.4.12" --aux-address="a=192.168.4.13"   --aux-address="a=192.168.4.14" --aux-address="a=192.168.4.15"   --aux-address="a=192.168.4.16"   -o macvlan_mode=bridge   -o parent=eth0 macnet32
+  181  docker run --cap-add=NET_ADMIN --cap-add=SYS_MODULE  --net macnet32 --ip 192.168.4.4  -it alpine /bin/sh
+  182  docker network remove macnet32
+  183  docker image list
+  184  docker container list
+  185  docker image list
+  186  docker image rm 28
+  187  docker container rm ef1
+  188  docker image rm 28
+  189  docker image rm 20bb
+  190  docker image rm 20b
+  191  docker image list
+  192  docker image rm 28f
+  193  docker container list
+  194  docker container list -all
+  195  docker container rm 2a
+  196  docker container list -all
+  197  docker container list -help
+  198  docker container list --help
+  199  docker container list --all
+  200  docker container rm 4d
+  201  docker container rm 45
+  202  docker container rm 20
+  203  docker container list --all
+  204  docker container rm ca
+  205  docker container list --all
+  206  docker image list
+  207  docker image rm 28
+  208  docker image rm bf
+  209  docker image list
+  210  exit
+  211  ifconfig
+  212  history|grep vi
+  213  history|grep echo
+  214  history| grep 192
+  215  route
+  216  cd 
+  217  vi openconnect.sh
+  218  chmod openconnect.sh
+  219  chmod +x openconnect.sh
+  220  sudo ./openconnect.sh 
+  221  vi openconnect.sh
+  222  rm ope
+  223  rm openconnect.sh 
+  224  sshutdown -h now
+  225  shutdown -h now
+  226  ls /dev/net
+  227  ls /dev/net/tun
+  228  iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+  229  iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT #change wlan+ to match your LAN adapter
+  230  iptables -A FORWARD -o tun0 -j ACCEPT
+  231  iptables -A FORWARD -i tun0 -m conntrack --ctstate ESTABLISHED,RELATED   -j ACCEPT
+  232  iptables -A INPUT -i tun0 -j ACCEPT   
+  235  ifconfig
+  236  pint 192.168.4.2
+  237  ping 192.168.4.2
+  238  ifconfig
+  240  ip
+  241  ip -all
+  242  ip -a
+  243  ifconfig -all
+  244  ifconfig -al
+  245  ifconfig -a
+  246  ip link show
+  247  iptables
+  248  ipables --list
+  249  iptables --list
+  250  iptables -S
+  251  iptables -R 
+  252  iptables -R  FORWARD -i tun0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+  253  iptables -D 
+  254  iptables -D  FORWARD -i tun0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+  255  iptables -D  FORWARD -o tun0 -j ACCEPT
+  256  iptables -D FORWARD -i eth0 -o tun0 -j ACCEPT
+  257  iptables -S
+  258  iptables -D INPUT -i tun0 -j ACCEPT
+  259  ip link show
+  260  ip tuntap add name tun0 mode tun
+  261  ifconfig
+  262  ifconfig -all
+  263  ifconfig -aa
+  264  ifconfig -a
+  265  vi connect.sh 
+  266  iptables -S
+  267  iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+  268  iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT #change wlan+ to match your LAN adapter
+  269  iptables -A FORWARD -o tun0 -j ACCEPT
+  270  iptables -A FORWARD -i tun0 -m conntrack --ctstate ESTABLISHED,RELATED   -j ACCEPT
+  271  iptables -A INPUT -i tun0 -j ACCEPT 
+  272  iptables -S
+  273  ./connect.sh 430250
+  274  exit
+  275  iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+  276  iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT #change wlan+ to match your LAN adapter
+  277  iptables -A FORWARD -o tun0 -j ACCEPT
+  278  iptables -A FORWARD -i tun0 -m conntrack --ctstate ESTABLISHED,RELATED   -j ACCEPT
+  279  iptables -A INPUT -i tun0 -j ACCEPT
+  280  cat /etc/iptables/rules.v4
+  281  route 
+  282  iptables-save > /etc/iptables/rules.v4
+  283  cat /etc/iptables/rules.v4
+  284  shutdown -r now
+  285  ./connect.sh 719508
+  286  ./connect.sh 435583
+  287  ./connect.sh 712792
+  288  vi connect.sh 
+  289  shutdown -h now
+  290  ./connect.sh 282405
+  291  ./connect.sh 221727
+  292  shutdown -h now
+  293  ./connect.sh 732104
+  294  ./connect.sh 728404
+  295  ./connect.sh 672886
+  296  shutdown -r now
+  297  ./connect.sh 941509
+  298  ./connect.sh 574545
+  299  ./connect.sh 744048
+  300  ./connect.sh 979412
+  301  ./connect.sh 693249
+  302  ./connect.sh 013422
+  303  ./connect.sh 832991
+  304  ./connect.sh 883012
+  305  ./connect.sh 954435
+  306  ./connect.sh 618708
+  307  ./connect.sh 785620
+  308  ./connect.sh 603653
+  309  ./connect.sh 639345
+  310  ./connect.sh 295633
+  311  shutdown -h now
+  312  ./connect.sh 825898
+  313  ./connect.sh 945831
+  314  ./connect.sh 990209
+  315  ping www.google.com
+  316  ./connect.sh 594433
+  317  vi connect.sh 
+  318  ./connect.sh 193570
+  319  shutdown -r now
+  320  ./connect.sh 833726
+  321  ifconfig
+  322  ./connect.sh 897184
+  323  ./connect.sh 634844
+  324  ./connect.sh 514647
+  325  ./connect.sh 901935
+  326  ./connect.sh 925431
+  327  ./connect.sh 234958
+  328  ./connect.sh 328103
+  329  ./connect.sh 355782
+  330  ./connect.sh 899126
+  331  ./connect.sh 693444
+  332  shutdown -h now
+  333  ./connect.sh 628027
+  334  ./connect.sh 988521
+  335  ifconfig
+  336  ./connect.sh 955012
+  337  ./connect.sh 756433
+  338  shutdown -h now
+  339  ifconfig
+  340  vi /etc/netplan/00-installer-config.yaml 
+  341  ip link show
+  342  ifconfig
+  343  vi /etc/netplan/00-installer-config.yaml 
+  344  shutdown -r now
+  345  ifconfig
+  346  vi /etc/netplan/00-installer-config.yaml 
+  347  netplan apply
+  348  ifconfig
+  349  vi /etc/netplan/00-installer-config.yaml 
+  350  netplan apply
+  351  ifconfig
+  352  vi /etc/netplan/00-installer-config.yaml 
+  353  netplan apply
+  354  ifconfig
+  355  vi /etc/netplan/00-installer-config.yaml 
+  356  ifconfig
+  357  vi /etc/netplan/00-installer-config.yaml 
+  358  netplan apply
+  359  ifconfig
+  360  vi /etc/netplan/00-installer-config.yaml 
+  361  netplan apply
+  362  ifconfig
+  363  ./connect 256780
+  364  ./connect.sh 531256
+  365  ./connect.sh 013417
+  366  ipconfig
+  367  ifconfig
+  368  ./connect.sh 075875
+  369  cat /etc/resolv.conf 
+  370  ./connect.sh 714945 &
+  371  cat /etc/resolv.conf 
+  372  ps -ef co
+  373  ./connect.sh 767115 &
+  374  cat /etc/resolv.conf 
+  375  ping 192.168.4.20
+  376  ping 192.168.4.3
+  377  ifconfig
+  378  ps -ef
+  379  ps -ef|grep connect
+  380  cat connect.sh 
+  381  history
+  382  history|lwaa
+  383  history|less
+  384  exit
+  385  vi /etc/ssh/sshd_config
+  386  service sshd restart
+  387  lsb_release -a
+  388  history|less
+  389  history > history_root.txt

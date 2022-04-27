@@ -1,0 +1,21 @@
+﻿#docker build -t kendarnode .
+#docker run kendarnode
+#got the mfrom https://unofficial-builds.nodejs.org/download/release/
+FROM alpine:latest
+RUN apk update
+RUN apk upgrade
+RUN apk add --no-cache  bash vim 
+RUN apk add --no-cache curl tar make gcc g++ python3 linux-headers binutils-gold gnupg libstdc++
+RUN apk add --no-cache wget bash vim openssl ca-certificates tar cifs-utils
+
+# From https://unofficial-builds.nodejs.org/download/release
+COPY ./nodes/node-v10.19.0-linux-x64-musl.tar.xz /root/node.tar.xz
+RUN xzcat /root/node.tar.xz| tar -vx --strip-components=1 -C /usr/local/
+
+RUN echo "#!/bin/sh" > startup.sh
+RUN echo "wget -O node.zip 'http://172.25.0.2/index.php?os=alpine&config=basic;node;smb'" >> startup.sh
+RUN echo "unzip -o node.zip" >> startup.sh
+RUN echo "./startup.sh" >> startup.sh
+RUN cp startup.sh startup.sh.old
+RUN chmod 777 startup.sh
+CMD ./startup.sh

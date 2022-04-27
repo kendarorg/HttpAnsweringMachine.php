@@ -1,0 +1,26 @@
+
+ <IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+   Header set Access-Control-Allow-Methods "*"
+   Header set Access-Control-Allow-Headers "*"
+   Header set Access-Control-Max-Age "86400"
+ </IfModule>
+
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP:Authorization} ^(.*)
+##RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+#RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.+)$ /index.php/$1 [L,QSA]
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+RewriteBase /
+RewriteRule ^index\.php$ - [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ /index.php/$1 [E=X-HTTP_AUTHORIZATION:%{HTTP:Authorization},QSA,L]

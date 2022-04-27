@@ -1,0 +1,47 @@
+#docker build -t myvpn .
+# docker-compose up --abort-on-container-exit
+FROM ubuntu:groovy
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install -y bash vim tar gzip
+
+
+RUN apt-get install -y iproute2 build-essential iptables net-tools curl
+RUN apt-get install -y tcpdump gettext vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev
+RUN apt-get install -y zlib1g-dev zlib1g
+RUN apt-get install -y wget tar openssl libssl-dev pkg-config
+RUN apt-get install -y libp11-kit-dev libp11-dev
+
+RUN apt-get install -y vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev   iptables       openssl libxml2  socat openssh-client curl file g++  gzip 
+RUN apt-get install -y  iptables   openssl  libxml2 socat openssh-client
+RUN apt-get install -y curl file g++   gzip 
+RUN apt-get install -y linux-headers-generic    make  tar                sed  procps
+RUN apt-get install -y  zlib1g-dev   iptables   libxml2-dev libxml2-dev 
+RUN apt-get install -y libuid-wrapper build-essential
+
+HEALTHCHECK  --interval=10s --timeout=10s --start-period=10s \
+  CMD /sbin/ifconfig tun0
+
+COPY openconnect-8.10.tar.gz openconnect-8.10.tar.gz
+
+update-alternatives --config iptables
+
+RUN tar -xvf openconnect-8.10.tar.gz
+WORKDIR /openconnect-8.10
+#RUN curl https://gitlab.com/openconnect/vpnc-scripts/raw/master/vpnc-script -o /etc/vpnc/vpnc-script
+#RUN chmod 750 /etc/vpnc/vpnc-script
+#RUN chmod -R 777 /etc/vpnc
+RUN ./configure --prefix=/opt/openconnect
+#RUN make check
+RUN make
+RUN make install
+
+WORKDIR /
+RUN mkdir /svcs
+COPY startup.sh startup.sh
+COPY connect.sh connect.sh
+RUN chmod 777 *.sh
+ADD svcs /svcs
+RUN chmod -R 777 /svcs
+CMD ./startup.sh
+

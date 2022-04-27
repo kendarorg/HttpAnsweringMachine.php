@@ -1,0 +1,38 @@
+﻿#docker build -t java8 .
+#docker run --name java8 --privileged --network basiccompose_infonet --dns=172.25.0.3 java8
+FROM alpine:latest
+RUN apk update
+RUN apk upgrade
+RUN apk add --no-cache wget bash vim openssl ca-certificates tar cifs-utils
+
+# Install open JDK
+RUN apk add --no-cache  openjdk8
+
+# Setup maven
+COPY apache-maven-3.6.3-bin.tar.gz /
+RUN tar -xvf apache-maven-3.6.3-bin.tar.gz
+RUN mkdir -p /root/.m2
+RUN mkdir /mavenrepo
+
+# Setup JAVA_HOME -- useful for docker commandline
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk/
+RUN export JAVA_HOME
+
+# Add maven and java to path
+ENV PATH="/apache-maven-3.6.3/bin:${JAVA_HOME}/bin:${PATH}"
+
+
+
+RUN echo "#!/bin/sh" > startup.sh
+RUN echo "wget -O java.zip 'http://172.25.0.2/index.php?os=alpine&config=basic;java;smb'" >> startup.sh
+RUN echo "unzip -o java.zip" >> startup.sh
+RUN echo "./startup.sh" >> startup.sh
+RUN cp startup.sh startup.sh.old
+RUN chmod 777 startup.sh
+CMD ./startup.sh
+
+
+# openssl x509 -in myCA.crt -inform pem -out myCA.der -outform der
+# keytool -v -printcert -file 
+# keytool -importcert -alias startssl -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file myCA.der
+# keytool -importcert -alias certalias -file root-ca-cert -keystore $JAVA_HOME/jre/lib/security/cacerts  (changeit)

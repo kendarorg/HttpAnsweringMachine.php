@@ -1,0 +1,96 @@
+#https://www.reddit.com/r/docker/comments/dnrttk/remotely_access_docker_container_thats_running/
+version: "2"
+#/usr/local/share/ca-certificates/
+networks:
+  infonet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/24
+volumes:
+  m2repo_volume:
+    external: false
+services:
+  config:
+    container_name: config
+    build: './config/'
+    privileged: true
+    dns:
+      - 8.8.8.8
+      - 8.8.8.4
+    networks:
+      infonet:
+        ipv4_address: 172.25.0.2
+    ports:
+      - "20080:80"
+    volumes:
+      - ./config_server/:/var/www/localhost/htdocs/
+    healthcheck:
+      test: wget -q -O /dev/null http://localhost/health.php
+  dns:
+    container_name: dns
+    build: './dns/'
+    #  localhost:5380 foo/bar
+    ports:
+      - "10081:8080"
+    privileged: true
+    environment:
+      - HTTP_USER=foo
+      - HTTP_PASS=bar
+    networks:
+      infonet:
+        ipv4_address: 172.25.0.3
+    depends_on: 
+      config:
+        condition: service_healthy
+  vpn:
+    container_name: vpn
+    build: './vpn/'
+    networks:
+      infonet:
+        ipv4_address: 172.25.0.4
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - DAC_READ_SEARCH
+    security_opt:
+      - label:disable
+    depends_on: 
+      config:
+        condition: service_healthy
+  apache:
+    container_name: apache
+    build: './apache/'
+    privileged: true
+    dns:
+      - 10.136.111.21
+      - 10.110.49.21
+    networks:
+      infonet:
+        ipv4_address: 172.25.0.5
+    ports:
+      - "11080:80"
+      - "11443:443"
+    volumes:
+      - ./public_html/:/var/www/localhost/htdocs/
+    depends_on: 
+      config:
+        condition: service_healthy
+  ssh:
+    container_name: ssh
+    build: './ssh/'
+    privileged: true
+    ports:
+      - "11022:2222"
+    dns:
+      - 172.25.0.3
+      - 10.136.111.21
+      - 10.110.49.21
+      - 8.8.8.8
+      - 8.8.4.4
+    networks:
+      infonet:
+        ipv4_address: 172.25.0.6
+    depends_on: 
+      config:
+        condition: service_healthy

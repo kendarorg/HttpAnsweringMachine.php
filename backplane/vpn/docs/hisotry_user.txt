@@ -1,0 +1,189 @@
+    1  su
+    2  sudo su
+    3  sudo su
+    4  ifconfig
+    5  sudo su
+    6  exit
+    7  sudo apt-get remove docker docker-engine docker.io containerd runc
+    8  sudo apt-get install docker-ce docker-ce-cli containerd.io
+    9  sudo docker run hello-world
+   10  docker ps
+   11  vi /etc/default/
+   12  sudo su
+   13  sudo update-initramfs -u
+   14  shutdown -r now
+   15  docker ps
+   16  su
+   17  sudo su
+   18  ifconfig
+   19  sudo ip address del 192.168.4.2/24 dev eth0
+   20  sudo ip address add 192.168.4.3/24 dev eth0
+   21  sudo service network-manager stop
+   22  cd /etc/sysconfig
+   23  cat /etc/network/interfaces 
+   24  ls /etc/network/interfaces 
+   25  ls /etc/netplan/
+   26  cd /etc/netplan/
+   27  vi 00-installer-config.yaml 
+   28  sudo vi 00-installer-config.yaml 
+   29  shutdown -r now
+   30  docker network ls
+   31  sudo su
+   32  ifconfig
+   33  ip r
+   34  ip r|grep default
+   35  ifconfig eth0 promisc
+   36  su ifconfig eth0 promisc
+   37  sudo ifconfig eth0 promisc
+   38  ifconfig
+   39  exit
+   40  sudo apt-get remove docker docker-engine docker.io containerd runc
+   41  sudo apt-get remove docker-ce docker-ce-cli containerd.io
+   42  ls
+   43  rm get-docker.sh 
+   44  ls
+   45  sudo rm get-docker.sh 
+   46  vi openconnect.sh
+   47  ifconfig
+   48  sudo su
+   49  sudo apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev
+   50  wget https://fossies.org/linux/privat/openconnect-8.10.tar.gz
+   51  ;s
+   52  ls
+   53  tar -xvf openconnect-8.10.tar.gz 
+   54  cd openconnect-8.10/
+   55  ./config
+   56  ./configure
+   57  sudo apt-get install -y gnutls gnutls-utils iptables libev libintl libnl3 libseccomp linux-pam lz4-libs openssl  libxml2 nmap-ncat socat openssh-client
+   
+    57  sudo apt-get install -y  iptables openssl  libxml2 socat openssh-client
+   
+   58  sudo apt-get install -y curl file g++ gnutls-dev  gzip libev-dev
+   59  sudo apt-get install -y linux-headers linux-pam-dev lz4-dev make readline-dev tar sed readline procps
+   
+   59  sudo apt-get install -y  linux-headers-generic make tar sed procps
+   
+   60  ./configure
+   61  ./configure
+   62  sudo apt-get pkg-config
+   63  apt-get install -y pkg-config
+   64  sudo apt-get install -y pkg-config
+   65  ./configure
+   66  sudo apt-get install lz4-libs
+   67  sudo apt-get install zlib1g-dev
+   68  ./configure
+   69  sudo apt-get install libxml2-dev 
+   70  sudo apt-get install gnutls gnutls-utils iptables libev libintl
+   71  sudo apt-get install libxml2 nmap-ncat socat
+   72  ./config
+   73  ./configure
+   74  less config.log
+   75  rm config.log 
+   76  ./configure
+   77  less config.log
+   78  sudo apt-get install uid-wrapper
+   79  sudo apt-get install libuid-wrapper
+   80  ./configure
+   81  less config.log
+   82  sudo apt-get install build-essential
+   83  ./configure
+   84  ./configure --prefix=/opt/openconnect
+   85  make check
+   86  history|grep apt-ge
+   87  sudo apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev gnutls gnutls-utils iptables libev libintl libnl3 libseccomp linux-pam lz4-libs openssl libxml2 nmap-ncat socat openssh-client curl file g++ gnutls-dev  gzip libev-dev
+   88  linux-headers  linux-pam-dev lz4-dev make readline-dev tar sed readline procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essentialsudo apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev
+   89  linux-headers  linux-pam-dev lz4-dev make readline-dev tar sed readline procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+   90  sudo apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev linux-headers  linux-pam-dev lz4-dev make readline-dev tar sed readline procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+   91  sudo apt-get install vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ gnutls-dev  gzip libev-dev make tar sed gettext procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+   92  sudo apt-get install -y vpnc-scripts libxml2-dev libssl-dev libproxy-dev libkrb5-dev iptables  openssl libxml2  socat openssh-client curl file g++ libgnutls28-dev  gzip libev-dev make tar sed gettext procps  zlib1g-dev libxml2-dev libuid-wrapper  build-essential
+   93  ./configure --prefix=/opt/openconnect
+   94  make check
+   95  make
+   96  sudo make install
+   97  cd ..
+   98  vi connect.sh
+   99  ls /opt/openconnect/sbin/
+  100  ls opt/openconnect/libexec/openconnect/
+  101  ls /opt/openconnect/libexec/openconnect/
+  102  ls
+  103  rm openconnect-8.10.tar.gz 
+  104  vi connect.sh 
+  105  ifconfig
+  106  sudo ifconfig
+  107  ls
+  108  chmod +x connect.sh 
+  109  vi connect.sh 
+  110  vi connect.sh
+  111  ./connect.sh 600161
+  112  sudo ./connect.sh 600161
+  113  vi connect.sh
+  114  sudo ./connect.sh 700907
+  115  sudo ifconfig 
+  116  ls /dev/net
+  117  sudo ifconfig /all
+  118  sudo ifconfig -all
+  119  sudo ifconfig --help
+  120  sudo ifconfig -a
+  121  ls /dev/net
+  122  ls /dev/net/tun
+  123  ls /dev/net/tun/test
+  124  ls /dev/net/tun/0
+  125  sudo ./connect.sh 010993
+  126  cat /etc/sysctl.conf
+  127  sudo vi /etc/sysctl.conf
+  128  sudo sysctl -p
+  129  ifconfig
+  130  ping https://gitlab.opp.company.it/
+  131  ping gitlab.opp.company.it
+  132  vi /etc/resolv.conf
+  133  sudo vi /etc/resolv.conf
+  134  sudo ./connect.sh 920162
+  135  exit
+  136  ifconfig
+  137  sudo ifconfig
+  138  ls /dev/tun
+  139  sudo su
+  140  exit
+  141  cat /etc/netplan/
+  142  cat /etc/netplan/00-installer-config.yaml 
+  143  cat /etc/resolv.conf
+  144  exit
+  145  sudo ./connect.sh 758192
+  146  cat /etc/resolv.conf 
+  147  ifconfig
+  148  route --list
+  149  route
+  150  iptables
+  151  iptables -h
+  152  iptables -list
+  153  sudo iptables -S
+  154  sudo apt-get install iptables-persistent
+  155  cat /etc/sysctl.conf
+  156  iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+  157  iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT #change wlan+ to match your LAN adapter
+  158  iptables -A FORWARD -o tun0 -j ACCEPT
+  159  iptables -A FORWARD -i tun0 -m conntrack --ctstate ESTABLISHED,RELATED   -j ACCEPT
+  160  iptables -A INPUT -i tun0 -j ACCEPT
+  161  sudo su
+  162  sudo ./connect.sh 666672
+  163  shutdown -h now
+  164  sudo ./connect.sh 453115
+  165  shutdown -h now
+  166  sudo su
+  168  cat index.html 
+  171  exit
+  172  ls
+  173  cat connect.sh 
+  174  cat /opt/openconnect/libexec/openconnect/hipreport.sh
+  175  cat connect.sh 
+  176  cat /opt/openconnect/libexec/openconnect/hipreport.sh
+  177  cat /etc/resolv.conf 
+  178  sudo su
+  179  ifconfig
+  180  ipconfig
+  181  sudo su
+  182  history|less
+  183  vi /etc/ssh/sshd_config
+  184  history>setup.txt
+  185  sudo su
+  186  history > hisotry_user.txt

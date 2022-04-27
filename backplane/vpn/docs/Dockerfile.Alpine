@@ -1,0 +1,38 @@
+#docker build -t myvpn .
+# docker-compose up --abort-on-container-exit
+FROM alpine:latest
+RUN apk update
+RUN apk upgrade
+RUN apk add --no-cache  bash vim
+
+
+RUN apk add --no-cache iputils iptables net-tools curl krb5-dev
+RUN apk add --no-cache tcpdump gettext gcc make libproxy-dev
+RUN apk add --no-cache pkgconfig libxml2-dev zlib-dev zlib
+RUN apk add --no-cache wget tar wget build-base openssl openssl-dev
+RUN apk add --no-cache p11-kit-dev linux-headers
+
+HEALTHCHECK  --interval=10s --timeout=10s --start-period=10s \
+  CMD /sbin/ifconfig tun0
+
+COPY openconnect-8.10.tar.gz openconnect-8.10.tar.gz
+
+RUN tar -xvf openconnect-8.10.tar.gz
+WORKDIR /openconnect-8.10
+RUN curl https://gitlab.com/openconnect/vpnc-scripts/raw/master/vpnc-script -o /etc/vpnc/vpnc-script
+RUN chmod 750 /etc/vpnc/vpnc-script
+RUN chmod -R 777 /etc/vpnc
+RUN ./configure --prefix=/opt/openconnect
+RUN make check
+RUN make
+RUN make install
+
+WORKDIR /
+RUN mkdir /svcs
+COPY startup.sh startup.sh
+COPY connect.sh connect.sh
+RUN chmod 777 *.sh
+ADD svcs /svcs
+RUN chmod -R 777 /svcs
+CMD ./startup.sh
+
