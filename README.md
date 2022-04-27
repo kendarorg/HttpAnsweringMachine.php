@@ -1,2 +1,2 @@
 # HttpAnsweringMachine.php
-Old version for reference
+Old version of https://github.com/kendarorg/HttpAnsweringMachine for reference
